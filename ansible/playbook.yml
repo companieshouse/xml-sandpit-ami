@@ -7,4 +7,4 @@
   roles:
     - ch_collections.heritage_services.heritage_frontend_base
     - ch_collections.enterpriselinux6.nfs
-    - xmltest-config
+    - xml-sandpit-config
