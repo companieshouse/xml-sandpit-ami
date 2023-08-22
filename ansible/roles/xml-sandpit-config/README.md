@@ -1,6 +1,6 @@
-# Ansible Role: xmltest-config
+# Ansible Role: xml-sandpit-config
 
-Configure tasks specific to XMLTEST:
+Configure tasks specific to XML Sandpit:
 
 Download library artifact
 Unarchive and move files to correct locations (Xerces, Perl)

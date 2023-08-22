@@ -1,5 +1,5 @@
 ---  
-- hosts: xmltest
+- hosts: xml-sandpit
   become: true
   gather_facts: yes
   vars:

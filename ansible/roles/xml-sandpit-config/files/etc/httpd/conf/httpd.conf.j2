@@ -239,7 +239,7 @@ Include conf.d/perl.conf
 #  when the value of (unsigned)Group is above 60000; 
 #  don't use Group #-1 on these systems!
 #
-User xmltest
+User xml-sandpit
 Group chlservices
 
 ### Section 2: 'Main' server configuration
@@ -289,7 +289,7 @@ UseCanonicalName Off
 # documents. By default, all requests are taken from this directory, but
 # symbolic links and aliases may be used to point to other locations.
 #
-DocumentRoot "/home/xmltest/htdocs/XMLGW"
+DocumentRoot "/home/xml-sandpit/htdocs/XMLGW"
 
 #
 # Each directory to which Apache has access can be configured with respect
@@ -1020,43 +1020,43 @@ BrowserMatch "^Dreamweaver-WebDAV-SCM1" redirect-carefully
 # need for mod_ssl configuration that follows
 SetEnvIf X-Forwarded-Proto "https" HTTPS=on
 
-Alias /style/com/ "/home/xmltest/htdocs/sitecommon/style/"
-<Directory "/home/xmltest/htdocs/sitecommon/style">
+Alias /style/com/ "/home/xml-sandpit/htdocs/sitecommon/style/"
+<Directory "/home/xml-sandpit/htdocs/sitecommon/style">
     Options -Indexes FollowSymLinks +ExecCGI +Includes
     Order allow,deny
     Allow from all
 </Directory>
 
-Alias /scripts/com/ "/home/xmltest/htdocs/sitecommon/scripts/"
-<Directory "/home/xmltest/htdocs/sitecommon/scripts">
+Alias /scripts/com/ "/home/xml-sandpit/htdocs/sitecommon/scripts/"
+<Directory "/home/xml-sandpit/htdocs/sitecommon/scripts">
     Options -Indexes FollowSymLinks +ExecCGI +Includes
     Order allow,deny
     Allow from all
 </Directory>
 
-Alias /style/ "/home/xmltest/htdocs/promo2/css/"
-<Directory "/home/xmltest/htdocs/promo2/css">
+Alias /style/ "/home/xml-sandpit/htdocs/promo2/css/"
+<Directory "/home/xml-sandpit/htdocs/promo2/css">
     Order allow,deny
     Allow from all
 </Directory>
 
-Alias /images/ "/home/xmltest/htdocs/promo2/images/"
-<Directory "/home/xmltest/htdocs/promo2/images">
+Alias /images/ "/home/xml-sandpit/htdocs/promo2/images/"
+<Directory "/home/xml-sandpit/htdocs/promo2/images">
     Order allow,deny
     Allow from all
 </Directory>
 
-Alias /inc/ "/home/xmltest/htdocs/promo2/inc/"
-<Directory "/home/xmltest/htdocs/promo2/inc">
+Alias /inc/ "/home/xml-sandpit/htdocs/promo2/inc/"
+<Directory "/home/xml-sandpit/htdocs/promo2/inc">
     Options +Includes FollowSymLinks +ExecCGI
     Order allow,deny
     Allow from all
 </Directory>
 
-Alias /SchemaStatus "/home/xmltest/htdocs/XMLGW/xmlgw/SchemaStatus"
-Alias /SchemaStatusOutput "/home/xmltest/htdocs/XMLGW/xmlgw/SchemaStatusOutput"
-Alias /v1-0/xmlgw/ "/home/xmltest/htdocs/XMLGW/xmlgw/"
-<Directory "/home/xmltest/htdocs/XMLGW/xmlgw">
+Alias /SchemaStatus "/home/xml-sandpit/htdocs/XMLGW/xmlgw/SchemaStatus"
+Alias /SchemaStatusOutput "/home/xml-sandpit/htdocs/XMLGW/xmlgw/SchemaStatusOutput"
+Alias /v1-0/xmlgw/ "/home/xml-sandpit/htdocs/XMLGW/xmlgw/"
+<Directory "/home/xml-sandpit/htdocs/XMLGW/xmlgw">
     Options -Indexes FollowSymLinks +ExecCGI
     SetHandler cgi-script
     SetHandler perl-script
@@ -1066,17 +1066,17 @@ Alias /v1-0/xmlgw/ "/home/xmltest/htdocs/XMLGW/xmlgw/"
     Allow from all
 </Directory>
 
-Alias /v1-0/schema/ "/home/xmltest/htdocs/XMLGW/schema/"
-<Directory "/home/xmltest/htdocs/XMLGW/schema">
+Alias /v1-0/schema/ "/home/xml-sandpit/htdocs/XMLGW/schema/"
+<Directory "/home/xml-sandpit/htdocs/XMLGW/schema">
     Options -Indexes FollowSymLinks
     Order allow,deny
     Allow from all
     AddType text/xml .xml
 </Directory>
 
-Alias /v1-1/schema/ "/home/xmltest/htdocs/XMLGW/schema/"
-Alias /v2-1/schema/ "/home/xmltest/htdocs/XMLGW/schema/"
-<Directory "/home/xmltest/htdocs/XMLGW/schema">
+Alias /v1-1/schema/ "/home/xml-sandpit/htdocs/XMLGW/schema/"
+Alias /v2-1/schema/ "/home/xml-sandpit/htdocs/XMLGW/schema/"
+<Directory "/home/xml-sandpit/htdocs/XMLGW/schema">
     Options -Indexes FollowSymLinks
     Order allow,deny
     Allow from all
@@ -1084,14 +1084,14 @@ Alias /v2-1/schema/ "/home/xmltest/htdocs/XMLGW/schema/"
     AddType text/xml .xsd
 </Directory>
 
-Alias /v1-0/ "/home/xmltest/htdocs/XMLGW/static/"
-<Directory "/home/xmltest/htdocs/XMLGW/static">
+Alias /v1-0/ "/home/xml-sandpit/htdocs/XMLGW/static/"
+<Directory "/home/xml-sandpit/htdocs/XMLGW/static">
     Options -Indexes FollowSymLinks
     Order allow,deny
     Allow from all
 </Directory>
 
-<Directory "/home/xmltest/htdocs/XMLGWwww/handlers">
+<Directory "/home/xml-sandpit/htdocs/XMLGWwww/handlers">
     Options -Indexes FollowSymLinks +ExecCGI
     SetHandler cgi-script
     SetHandler perl-script
@@ -1101,8 +1101,8 @@ Alias /v1-0/ "/home/xmltest/htdocs/XMLGW/static/"
     Allow from all
 </Directory>
 
-Alias / "/home/xmltest/htdocs/XMLGWwww/html/"
-<Directory "/home/xmltest/htdocs/XMLGWwww/html">
+Alias / "/home/xml-sandpit/htdocs/XMLGWwww/html/"
+<Directory "/home/xml-sandpit/htdocs/XMLGWwww/html">
     Options -Indexes FollowSymLinks +ExecCGI +Includes
     AddHandler cgi-script .cgi
     Order allow,deny

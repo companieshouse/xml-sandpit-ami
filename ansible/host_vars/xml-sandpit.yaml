@@ -5,11 +5,11 @@ selinux_status:
     state: permissive
 
 users:
-  - name: xmltest
+  - name: xml-sandpit
     group: chlservices
     gid: 600
 
-app_user_home_path: /home/xmltest
+app_user_home_path: /home/xml-sandpit
 
 s3_file_perl_lib: /application/shared/libraries/perl-xerces-lib.tar.gz
 s3_file_perl_lib_name: '{{ s3_file_perl_lib | basename }}'
