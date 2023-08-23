@@ -2,7 +2,7 @@ warn "Executing startup.pl...\n";
 sleep 1;
  
 # Extend @INC if needed
-use lib qw(/etc/httpd/conf /home/xmltest/MODULES/ /home/xmltest/htdocs/XMLGW/ /home/xmltest/config);
+use lib qw(/etc/httpd/conf /home/xml-sandpit/MODULES/ /home/xml-sandpit/htdocs/XMLGW/ /home/xml-sandpit/config);
  
 # Make sure we are in a sane environment.
 $ENV{MOD_PERL} or die "not running under mod_perl!";

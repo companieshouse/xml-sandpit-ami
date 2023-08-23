@@ -66,18 +66,18 @@
 - name: Enable crontab for XML user
   lineinfile:
     dest: "/etc/cron.allow"
-    line: "xmltest"
-    regexp: "^xmltest"
+    line: "xml-sandpit"
+    regexp: "^xml-sandpit"
 
-- name: Allow xmltest to use apachectl 
+- name: Allow xml-sandpit to use apachectl 
   copy:
-    dest: "/etc/sudoers.d/xmltest"
+    dest: "/etc/sudoers.d/xml-sandpit"
     content: |
       # XML user
-      xmltest ALL=(ALL) NOPASSWD:/usr/sbin/apachectl
+      xml-sandpit ALL=(ALL) NOPASSWD:/usr/sbin/apachectl
 
 - name: Disable password expiry for XML user so it doesnt break cron
-  command: "chage -m 0 -M 99999 -I -1 -E -1 xmltest"
+  command: "chage -m 0 -M 99999 -I -1 -E -1 xml-sandpit"
 
 - name: Copy deployment scripts to server for later use
   vars:

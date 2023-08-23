@@ -7,7 +7,7 @@
     vars:
       ansible_python_interpreter: /usr/local/bin/python3.6
       application_name: "xmlgw"
-      home_dir: "/home/xmltest"
+      home_dir: "/home/xml-sandpit"
       directories:
         - "DATA"
         - "MODULES"
@@ -86,7 +86,7 @@
       - name: Ensure apache config files are all owned and permissions are set correctly
         ansible.builtin.file:
           path: "{{ item }}"
-          owner: xmltest
+          owner: xml-sandpit
           group: chlservices
           mode: 0644
         loop:
