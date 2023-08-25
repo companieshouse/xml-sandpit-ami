@@ -74,7 +74,7 @@
       - name: Download environment config files from S3
         aws_s3:
           bucket: "{{ s3_bucket_configs }}"
-          object: "chl-{{ application_config_name }}-configs/{{ heritage_environment }}/{{ item | upper }}Config.pm"
+          object: "chl-{{ application_config_name }}-backend-configs/{{ heritage_environment }}/{{ item | upper }}Config.pm"
           dest: "{{ home_dir }}/config/My/{{ item | upper }}Config.pm"
           mode: get
         loop: "{{ config_files }}"
