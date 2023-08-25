@@ -7,7 +7,7 @@
     vars:
       ansible_python_interpreter: /usr/local/bin/python3.6
       application_name: "xmlgw-backend"
-      application_config_name: "xmlsp"
+      application_config_name: "xml-sandpit"
       home_dir: "/home/xml-sandpit"
       directories:
         - "DATA"
