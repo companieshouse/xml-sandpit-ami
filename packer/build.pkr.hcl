@@ -4,11 +4,18 @@ build {
   ]
 
   provisioner "ansible" {
-    host_alias = "${var.ansible_host_alias}"
-    playbook_file = "${var.playbook_file_path}"
+    host_alias       = "${var.ansible_host_alias}"
+    playbook_file    = "${var.playbook_file_path}"
     extra_arguments  = [
       "-e", "aws_region=${var.aws_region}",
       "-e", "s3_bucket=${var.aws_s3_release_bucket}"
+    ]
+  }
+
+  provisioner "shell" {
+    inline = [
+      "sudo find /root /home -name authorized_keys -delete",
+      "sudo find /root /home -name '.*history' -delete"
     ]
   }
 }
