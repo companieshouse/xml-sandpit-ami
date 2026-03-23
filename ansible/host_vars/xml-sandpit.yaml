@@ -44,3 +44,6 @@ postfix_net_config:
     value: all
   - key: inet_protocols
     value: ipv4
+
+## clamav_ng Variables
+clamav_ng_freshclam_privatemirror: clamav-mirror.sharedservices.aws.internal

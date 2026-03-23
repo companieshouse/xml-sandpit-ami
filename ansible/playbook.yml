@@ -8,3 +8,9 @@
     - ch_collections.heritage_services.heritage_frontend_base
     - ch_collections.enterpriselinux6.nfs
     - xml-sandpit-config
+
+- hosts: xml-sandpit
+  become: true
+  gather_facts: yes
+  roles:
+    - companieshouse.security.clamav_ng
